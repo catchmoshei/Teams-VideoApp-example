@@ -6,7 +6,8 @@
   "scripts": {
     "start-app": "node server.js ./app 8000",
     "start-container": "node server.js ./container 9000",
-    "build": "cd sdk && yarn build && cd .. && yarn copysdk",
+    "start-server": "node server.js ../ 8000",
+    "build": "npm install && node server.js ../ 8000",
     "copysdk": "./node_modules/.bin/copyfiles ./sdk/dist/* ./app"
   },
   "keywords": [],
